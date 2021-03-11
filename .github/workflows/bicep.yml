@@ -39,12 +39,3 @@ jobs:
           name: dist-without-markdown
           path: ./**/*.json
 
-      - run: find ./ -type f 
-      
-      - name: Azure CLI Action
-        uses: Azure/cli@1.0.4
-        with:
-          # Specify the script here
-          inlineScript:  |
-            az bicep --help 
-
