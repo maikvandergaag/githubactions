@@ -30,6 +30,8 @@ jobs:
           chmod +x ./bicepinstall
           sudo mv ./bicepinstall /usr/local/bin/bicep
           bicep --help
+      
+      - run:    bicep build bicep/storage.bicep
 
       - name: Azure CLI Action
         uses: Azure/cli@1.0.4
