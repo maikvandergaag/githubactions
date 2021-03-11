@@ -37,8 +37,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: dist-without-markdown
-          path: |
-            /**/*.json
+          path: ./**/*.json
 
       - run: find ./ -type f 
       
