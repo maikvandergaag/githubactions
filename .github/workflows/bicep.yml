@@ -33,6 +33,8 @@ jobs:
       
       - run:    bicep build bicep/storage.bicep
 
+      - run: find ./ -type f 
+      
       - name: Azure CLI Action
         uses: Azure/cli@1.0.4
         with:
