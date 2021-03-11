@@ -31,7 +31,7 @@ jobs:
           sudo mv ./bicepinstall /usr/local/bin/bicep
           bicep --help
       
-      - run:    bicep build bicep/storage.bicep
+      - run:    bicep build ./bicep/storage.bicep
 
       - run: find ./ -type f 
       
