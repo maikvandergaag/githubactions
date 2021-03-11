@@ -32,6 +32,13 @@ jobs:
           bicep --help
       
       - run:    bicep build ./bicep/storage.bicep
+      
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: dist-without-markdown
+          path: |
+            /**/*.json
 
       - run: find ./ -type f 
       
